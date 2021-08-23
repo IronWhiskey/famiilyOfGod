@@ -1,0 +1,108 @@
+*{ padding:0px; margin:0px;}
+/** base calendar styles **/
+#cc_calendar a:link, a:visited{text-decoration:none; border-bottom:0px; color:#000000;}
+#cc_webcalendar a:link, a:visited{text-decoration:none; border-bottom:0px; color:#000000;}
+#cc_calendar_container { position:relative; }
+
+#cc_calendar { width:700px;  border-collapse:collapse; border:1px solid #5a4a42;text-align:left; table-layout:fixed;}
+#cc_calendar th, #cc_calendar td { font-family:helvetica; }
+#cc_calendar th  { height:0px }
+
+/** header top **/
+#cc_calendar thead tr#headertop { background:url('../images/red_header_48.png') repeat-x; height:70px; }
+#cc_calendar thead th#this-month { color:#FFF; font-family:helvetica; font-size:22px; padding-top:25px;text-align:center; overflow:hidden;white-space: nowrap; text-overflow: ellipsis;}
+#cc_calendar thead th#prev-month { text-align:left; padding-left:10px; color:#FFF; font-family:helvetica; font-size:22px; padding-top:25px;  overflow:hidden;white-space: nowrap; text-overflow: ellipsis;}
+#cc_calendar thead th#next-month { text-align:right; padding-right:10px; color:#FFF; font-family:helvetica; font-size:22px; padding-top:25px;  overflow:hidden;white-space: nowrap; text-overflow: ellipsis;}
+#cc_calendar thead th.month-navigation a { color:#fff; text-decoration:none; }
+#cc_calendar thead th.month-navigation a span { display:none; font-size:18px;}
+#cc_calendar thead th.month-navigation a:hover { text-decoration:none; }
+#cc_calendar thead th.month-navigation a:hover span { display:inline; }
+
+/** header days list **/
+#cc_calendar thead tr#headerdaylist { background:url('../images/grey_header_week_48.png') repeat-x; height:28px; }
+#cc_calendar thead td{ color:#716558; font-size:15px; text-align:center; padding-top:2px;overflow:hidden; white-space: nowrap; text-overflow: ellipsis;}
+
+/** header footer **/
+#cc_calendar tfoot tr{ background:url('../images/grey_footer_48.png') repeat-x; height:40px; color:#7B7979; font-size:11px; vertical-align:top; }
+#cc_calendar tfoot tr a{ color:#4f4c4d; font-size:11px;}
+
+/**
+not needed?
+#cc_calendar thead th { color:#eee; font-size:13px; padding:4px;}
+#cc_calendar tfoot td { background:#999; color:#eee; font-size:10px; padding:2px 4px;}
+**/
+
+/** calendar days **/
+#cc_calendar tbody td { width:14.28571%; vertical-align:text-top; }
+#cc_calendar .day { border:1px solid #918f8f; height:100px; 
+background:#f4f4f4 url('../images/shadow_under_day_48.png') repeat-x;}
+#cc_calendar .notinrange  { background-color:#deddde;}
+#cc_calendar .date-number { display:block; color:#5a4a42; font-size:10px; padding:2px 4px; text-align:right; }
+#cc_calendar .notinrange .date-number { color:#aaa;}
+
+.hidden { display:none; }
+
+.eventlarge{
+  font-weight:bold; 
+  font-size:20px;  
+  color:#976900;
+  padding-bottom:7px;  
+}
+.eventmedium{ 
+  font-size:15px;  
+  color:#976900; 
+  padding-top:12px; 
+}
+.eventnormal{ 
+  font-size:15px;  
+  color:#976900; 
+  padding-top:4px; 
+  height: 100px;
+}
+
+.eventcalname{ 
+  font-size:13px;  
+  color:#c89628; 
+  overflow:hidden;
+}
+
+.morebutton 
+ {
+  position:absolute;
+  top:0; left:0;
+  display:block;
+  overflow:hidden;
+  z-index:99;
+  font-size:9px;
+  font-family:arial;
+  white-space:nowrap;
+  cursor:pointer;
+  text-shadow: #C0C0C0 1px 1px 1px;
+  color:#5a4a42; 
+  text-align:center;font-family:georgia;font-style: italic;
+}
+
+/** styles used in all events **/
+#cc_eventlist .FOGCCEventCalendar1, .FOGCCEventCalendar1allday, .FOGCCEventCalendar1left, .FOGCCEventCalendar1right, .FOGCCEventCalendar1leftright
+{
+  position:absolute;
+  top:0; left:0;
+  display:block;
+  overflow:hidden;
+  z-index:99;
+  font-size:11px;
+  font-family:arial;
+  white-space:nowrap;
+  cursor:pointer;
+  text-shadow: #C0C0C0 1px 1px 1px;
+}
+
+  /** styles used for specific event types **/
+
+/** FOGCCEventCalendar1 calendar styles **/
+#cc_eventlist .FOGCCEventCalendar1 a { color:#E696A0;}
+#cc_eventlist .FOGCCEventCalendar1 a span { color:#000;}
+#cc_eventlist .FOGCCEventCalendar1allday, .FOGCCEventCalendar1left, .FOGCCEventCalendar1right, .FOGCCEventCalendar1leftright  { color:#000000; background-color:#E696A0; }
+#cc_eventlist .FOGCCEventCalendar1allday { border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px; }
+#cc_eventlist .FOGCCEventCalendar1left { -webkit-border-top-right-radius: 10px; -webkit-border-bottom-right-radius: 10px; -moz-border-radius-topright: 10px; -moz-border-radius-bottomright: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; }
+#cc_eventlist .FOGCCEventCalendar1right { -webkit-border-top-left-radius: 10px; -webkit-border-bottom-left-radius: 10px; -moz-border-radius-topleft: 10px; -moz-border-radius-bottomleft: 10px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; }

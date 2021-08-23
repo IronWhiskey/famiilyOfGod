@@ -1,0 +1,4 @@
+# Use PHP5.4 Single php.ini as default
+AddHandler application/x-httpd-php56s .php
+DirectoryIndex index.html.var index.htm index.html index.shtml index.xhtml index.wml index.perl index.pl index.plx index.ppl index.cgi index.jsp index.js index.jp index.php4 index.php3 index.php index.phtml default.htm default.html home.htm index.php5 Default.html Default.htm home.html
+AddHandler application/x-httpd-php70s .php
